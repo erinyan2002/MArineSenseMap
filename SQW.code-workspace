@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../SQW"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "MArineSenseMap"
+	}
+}
