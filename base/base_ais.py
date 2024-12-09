@@ -1,5 +1,5 @@
 import asyncio
-import websockets
+import websockets # type: ignore
 import json
 from datetime import datetime, timezone
 ais_API_KEY= "910382efc9331d0e1e5875ec1cb0952c38d46af2"
