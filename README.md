@@ -98,20 +98,19 @@
 
 ### **실행 방법**
 ### **1. 저장소를 클론합니다.**
-   ```bash
    git clone https://github.com/erinyan2002/MarineSenseMap.git
    
 ### **2. 의존성을 설치합니다.**
-  ```bash
    pip install -r requirements.txt
 
 
-3. Python 스크립트를 실행하여 데이터를 처리합니다:
+### **3. Python 스크립트를 실행하여 데이터를 처리합니다:**
  ```bash
    python simulate.py
    
-4. 브라우저에서 **http://localhost:3000**으로 접속하여 실시간 데이터를 확인합니다.
+### **4. 브라우저에서 **http://localhost:3000**으로 접속하여 실시간 데이터를 확인합니다.**
 
+---
 
 ## **사용 방법**
 
