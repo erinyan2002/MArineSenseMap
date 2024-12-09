@@ -49,10 +49,14 @@
   - **노란색:** 보통
   - **주황색:** 나쁨
   - **빨간색:** 매우 나쁨
+![image](https://github.com/user-attachments/assets/3d9fc08a-80b6-4b31-827a-74f962c43b61)
+
 
 ### **3. 경유 선박 리스트**
 - WQI 기준에서 "나쁨" 이하로 평가된 선박을 자동으로 식별하고 리스트화.
 - 관련 선박의 상세 정보를 제공하여 수질 오염 원인을 추적.
+![image](https://github.com/user-attachments/assets/90a159be-4f48-4389-9662-d81879b29eb0)
+
 
 ### **4. 수질 데이터 시각화**
 - 지도에서 선박의 위치와 WQI 상태를 확인.
