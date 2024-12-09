@@ -10,7 +10,8 @@
 시뮬레이션 환경에서는 선박의 이동, 수질 상태, 그리고 수질 지수(WQI)를 기반으로 생성된 데이터를 활용하며, 지도와 차트를 통해 직관적으로 데이터를 확인할 수 있습니다.  
 데이터는 **Firebase**에 저장되어 실시간 동기화 및 관리를 지원합니다.
 
-![KakaoTalk_20241210_003708224](https://github.com/user-attachments/assets/5d0c2071-0a77-405d-a392-11b6c29cc325)
+![KakaoTalk_20241210_003708224 (1)](https://github.com/user-attachments/assets/a6f3913f-d69d-49b3-99cb-2717478126fa)
+
 
 ---
 
@@ -51,12 +52,15 @@
   - **노란색:** 보통
   - **주황색:** 나쁨
   - **빨간색:** 매우 나쁨
+ 
 ![image](https://github.com/user-attachments/assets/3d9fc08a-80b6-4b31-827a-74f962c43b61)
 
 
 ### **3. 경유 선박 리스트**
 - WQI 기준에서 "나쁨" 이하로 평가된 선박을 자동으로 식별하고 리스트화.
 - 관련 선박의 상세 정보를 제공하여 수질 오염 원인을 추적.
+
+  
 ![image](https://github.com/user-attachments/assets/90a159be-4f48-4389-9662-d81879b29eb0)
 
 
@@ -65,12 +69,21 @@
 - **파이 차트:** 전체 선박의 수질 등급 분포를 요약.
 - **라인 차트:** 시간에 따른 수질 데이터 변화를 시각화.
 
+![image](https://github.com/user-attachments/assets/bd494a7b-5b5f-4123-b0ec-c219bc970372)
+
+
 ### **5. 상세 측정 정보**
 - 각 선박의 온도, 염도, 탁도 등 세부 데이터를 사용자에게 제공.
+
+![image](https://github.com/user-attachments/assets/7e48fc32-ed0b-415e-91d3-ce281a19a288)
+
 
 ### **6. 측정 현황 분석**
 - 시간에 따른 WQI 변화를 차트로 표현하여 경향성을 분석.
 - 특정 지역에서의 수질 문제를 추적.
+
+![image](https://github.com/user-attachments/assets/d1817ed0-273d-4df4-8b5f-80238326a136)
+
 
 ---
 
