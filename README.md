@@ -69,7 +69,8 @@
 - **파이 차트:** 전체 선박의 수질 등급 분포를 요약.
 - **라인 차트:** 시간에 따른 수질 데이터 변화를 시각화.
 
-![image](https://github.com/user-attachments/assets/bd494a7b-5b5f-4123-b0ec-c219bc970372)
+![image](https://github.com/user-attachments/assets/a37db440-0824-43a2-a55d-c8d950c8b01d)
+
 
 
 ### **5. 상세 측정 정보**
@@ -82,7 +83,8 @@
 - 시간에 따른 WQI 변화를 차트로 표현하여 경향성을 분석.
 - 특정 지역에서의 수질 문제를 추적.
 
-![image](https://github.com/user-attachments/assets/d1817ed0-273d-4df4-8b5f-80238326a136)
+![image](https://github.com/user-attachments/assets/ab509d3d-de39-4067-8ef2-86045ff8bd15)
+
 
 
 ---
