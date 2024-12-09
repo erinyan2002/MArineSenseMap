@@ -3,6 +3,7 @@
 
 시뮬레이션 환경에서는 선박 이동, 수질 상태, 그리고 수질 지수(WQI)를 기반으로 생성된 데이터를 활용하여 지도와 차트를 통해 정보를 제공합니다.
 
+![profile2](https://github.com/user-attachments/assets/fd7d7861-6913-45df-aee0-dd574d1b7cda)
 
 시뮬레이션 기반 데이터 구성
 1. AIS 데이터
