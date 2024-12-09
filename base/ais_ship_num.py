@@ -1,5 +1,5 @@
 import asyncio
-import websockets
+import websockets # type: ignore
 import json
 from datetime import datetime, timezone
 

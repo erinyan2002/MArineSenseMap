@@ -1,5 +1,5 @@
 import asyncio
-import websockets
+import websockets # type: ignore
 import json
 import pytz
 from datetime import datetime, timezone
