@@ -1,12 +1,22 @@
+// const firebaseConfig = {
+//   apiKey: "AIzaSyC6RM-JOezScoTB-vOWhMSXh7sYPpZKyhg",
+//   authDomain: "asia-404305.firebaseapp.com",
+//   databaseURL: "https://asia-404305-default-rtdb.firebaseio.com/",
+//   projectId: "asia-404305",
+//   storageBucket: "asia-404305.appspot.com",
+//   messagingSenderId: "838765553299",
+//   appId: "1:838765553299:web:fbf45f8afe5a80d8d8cf66",
+//   measurementId: "G-SK4K6MNGVD",
+// };
 const firebaseConfig = {
-  apiKey: "AIzaSyC6RM-JOezScoTB-vOWhMSXh7sYPpZKyhg",
-  authDomain: "asia-404305.firebaseapp.com",
-  databaseURL: "https://asia-404305-default-rtdb.firebaseio.com/",
-  projectId: "asia-404305",
-  storageBucket: "asia-404305.appspot.com",
-  messagingSenderId: "838765553299",
-  appId: "1:838765553299:web:fbf45f8afe5a80d8d8cf66",
-  measurementId: "G-SK4K6MNGVD",
+  apiKey: "AIzaSyAt9PSSY7rAtEZ4s64Pc3YBd2Es8l9csTk",
+  authDomain: "erinpython-a6829.firebaseapp.com",
+  databaseURL: "https://erinpython-a6829-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "erinpython-a6829",
+  storageBucket: "erinpython-a6829.firebasestorage.app",
+  messagingSenderId: "592677237013",
+  appId: "1:592677237013:web:8d0fc4b354a2ffd0fd791c",
+  measurementId: "G-85YVNBYX33"
 };
 firebase.initializeApp(firebaseConfig);
 
@@ -68,7 +78,7 @@ function fetchAllCoordinates(callback) {
   const dbRef = firebase.database().ref();
   dbRef.on("value", (snapshot) => {
     console.log("데이터베이스에서 데이터를 가져왔습니다.");
-  
+
 
     snapshot.forEach((childSnapshot) => {
       const id = childSnapshot.key;
@@ -79,12 +89,12 @@ function fetchAllCoordinates(callback) {
         const timestamp = timestampSnapshot.key;
         const data = timestampSnapshot.val();
 
-        console.log(`ID: ${id}, Timestamp: ${timestamp}, Data:`, data); 
+        console.log(`ID: ${id}, Timestamp: ${timestamp}, Data:`, data);
         if (!maxTimestamp || new Date(timestamp) > new Date(maxTimestamp)) {
           maxTimestamp = timestamp;
           maxTimestampData = {
             tableId: id,
-            moveKey: timestamp, 
+            moveKey: timestamp,
             lat: parseFloat(data.latitude),
             lng: parseFloat(data.longitude),
             oxg: data.dissolved_oxygen,
@@ -105,10 +115,10 @@ function fetchAllCoordinates(callback) {
     });
 
     if (coordinates.length > 0) {
-      console.log("処理されたデータ: ", coordinates); 
+      console.log("処理されたデータ: ", coordinates);
       callback(coordinates);
     } else {
-      console.log("データが見つかりませんでした。"); 
+      console.log("データが見つかりませんでした。");
     }
   });
 }
@@ -118,10 +128,10 @@ function getBounds(coordinate, zoomLevel) {
   const delta = 5 / Math.pow(2, zoomLevel);
 
   return {
-    north: coordinate.lat + delta, 
-    south: coordinate.lat - delta, 
-    east: coordinate.lng + delta, 
-    west: coordinate.lng - delta, 
+    north: coordinate.lat + delta,
+    south: coordinate.lat - delta,
+    east: coordinate.lng + delta,
+    west: coordinate.lng - delta,
   };
 }
 
@@ -138,7 +148,7 @@ function clearRectangles() {
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 7,
-    center: { lat: 35.9078, lng: 127.7669 }, 
+    center: { lat: 35.9078, lng: 127.7669 },
     mapTypeId: "terrain",
     styles: [
       {
@@ -303,26 +313,26 @@ function initMap() {
     disableDefaultUI: true,
   });
   map.addListener("center_changed", function () {
-    currentCenter = map.getCenter(); 
+    currentCenter = map.getCenter();
   });
 
   function getColorByValue(value) {
     switch (value) {
       case 1:
-        return "#41a4ff"; 
+        return "#41a4ff";
       case 2:
-        return "#00bf03"; 
+        return "#00bf03";
       case 3:
-        return "#ffef00"; 
+        return "#ffef00";
       case 4:
-        return "#ffa500"; 
+        return "#ffa500";
       case 5:
-        return "#ff0000"; 
+        return "#ff0000";
       default:
-        return "#ffffff"; 
+        return "#ffffff";
     }
   }
-  
+
   function attachRectangleClickHandler(rectangle, coordinate) {
     google.maps.event.addListener(rectangle, "click", function () {
       showRectangleInfo(coordinate);
@@ -330,7 +340,7 @@ function initMap() {
     });
   }
 
-  
+
   function calculateDistance(coord1, coord2) {
     const R = 6371; // 지구 반지름 (km)
     const lat1 = (coord1[0] * Math.PI) / 180;
@@ -349,16 +359,16 @@ function initMap() {
     return R * c;
   }
 
- 
+
   function showTrackInfo(data) {
     var box = document.querySelector(".widget-content2");
-    box.innerHTML = ""; 
+    box.innerHTML = "";
     let htmlContent = "";
     data.forEach((item, index) => {
-      
+
       const date = new Date(item.timeStr);
 
-      
+
       const formattedDate = date.toLocaleString("ko-KR", {
         month: "long",
         day: "numeric",
@@ -369,7 +379,7 @@ function initMap() {
       htmlContent += `<p> ${formattedDate},<br>배 이름: ${item.shipId}</p>`;
     });
 
-    
+
     box.innerHTML = htmlContent;
   }
 
@@ -426,8 +436,8 @@ function initMap() {
     var content2 = document.querySelector(".content2");
     var box = document.querySelector(".widget-content1");
 
-    content2.style.display = "block"; 
-    box.innerHTML = ""; 
+    content2.style.display = "block";
+    box.innerHTML = "";
 
     const dbRef = firebase.database().ref();
     dbRef.once("value", (snapshot) => {
@@ -446,9 +456,8 @@ function initMap() {
           if (
             parseFloat(data.latitude) === coordinate.lat &&
             parseFloat(data.longitude) === coordinate.lng
-          )
-          {
-            
+          ) {
+
             box.innerHTML += `<p>시각: ${kstTimestamp}</p>`;
             box.innerHTML += `<p>위도: ${parseFloat(data.latitude).toFixed(
               2
@@ -516,9 +525,9 @@ function fetchCoordinateDataByPosition(coordinate, callback) {
   );
 
   if (foundCoordinate) {
-    callback(foundCoordinate); 
+    callback(foundCoordinate);
   } else {
-    callback(null); 
+    callback(null);
   }
 }
 
